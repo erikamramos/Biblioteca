@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BIBLIO_UCSMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Inventario_libros">
+    <Key>
+      <PropertyRef Name="Inventario" />
+    </Key>
+    <Property Name="Inventario" Type="int" Nullable="false" />
+    <Property Name="Enlace" Type="int" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="Tip_fondo" Type="nvarchar" MaxLength="2" />
+    <Property Name="Precio" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="Ult_inv" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ctrl_RFID" Type="nvarchar" MaxLength="3" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="10" />
+    <Property Name="Tomvol" Type="nvarchar" MaxLength="3" />
+    <Property Name="Biblioteca" Type="nvarchar" MaxLength="25" />
+    <Property Name="Coleccion" Type="nvarchar" MaxLength="25" />
+    <Property Name="Ejemplares" Type="nvarchar" MaxLength="25" />
+    <Property Name="Estado_Material" Type="nchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Libros">
+    <Key>
+      <PropertyRef Name="Enlace" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COD1" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="COD2" Type="nvarchar" MaxLength="9" />
+    <Property Name="COD3" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="COD4" Type="nvarchar" MaxLength="2" Nullable="false" />
+    <Property Name="COD5" Type="char" MaxLength="2" />
+    <Property Name="Titulo" Type="varchar" MaxLength="4000" />
+    <Property Name="Autor" Type="varchar" MaxLength="3000" />
+    <Property Name="Contenido" Type="nvarchar(max)" />
+    <Property Name="palabrasClave" Type="varchar" MaxLength="300" />
+    <Property Name="Enlace" Type="int" Nullable="false" />
+    <Property Name="Pri_isbn" Type="varchar" MaxLength="50" />
+    <Property Name="Pri_tifb" Type="nvarchar" MaxLength="2" />
+    <Property Name="img" Type="nvarchar" MaxLength="6" />
+    <Property Name="Tip_coleccion" Type="nvarchar" MaxLength="4" />
+    <Property Name="Compl" Type="char" MaxLength="1" />
+    <Property Name="Edicion" Type="nvarchar" MaxLength="10" />
+    <Property Name="Lugar" Type="nvarchar" MaxLength="50" />
+    <Property Name="Editorial" Type="nvarchar" MaxLength="250" />
+    <Property Name="Anyo" Type="nvarchar" MaxLength="4" />
+    <Property Name="Longitud" Type="decimal" Precision="18" Scale="1" />
+    <Property Name="Paginas" Type="nvarchar" MaxLength="5" />
+    <Property Name="Tipomater" Type="nvarchar" MaxLength="25" />
+    <Property Name="URL" Type="nvarchar" MaxLength="255" />
+    <Property Name="Idioma" Type="nvarchar" MaxLength="255" />
+    <Property Name="IdEditorial" Type="varchar" MaxLength="6" />
+    <Property Name="Anyo_reimp" Type="char" MaxLength="4" />
+    <Property Name="Fecha" Type="date" />
+    <Property Name="Estado_eliminacion" Type="char" MaxLength="1" />
+    <Property Name="contenidoOK" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="BIBLIO_UCSMModelStoreContainer">
+    <EntitySet Name="Inventario_libros" EntityType="Self.Inventario_libros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Libros" EntityType="Self.Libros" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

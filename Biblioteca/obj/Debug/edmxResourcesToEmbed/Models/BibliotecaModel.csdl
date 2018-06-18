@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BIBLIO_UCSMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Inventario_libros">
+    <Key>
+      <PropertyRef Name="Inventario" />
+    </Key>
+    <Property Name="Inventario" Type="Int32" Nullable="false" />
+    <Property Name="Enlace" Type="Int32" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Tip_fondo" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="Precio" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Ult_inv" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Ctrl_RFID" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Estado" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Tomvol" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="Biblioteca" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Coleccion" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Ejemplares" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Estado_Material" Type="String" MaxLength="3" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Libro">
+    <Key>
+      <PropertyRef Name="Enlace" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="COD1" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COD2" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="COD3" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COD4" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COD5" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Titulo" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="Autor" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="Contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="palabrasClave" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Enlace" Type="Int32" Nullable="false" />
+    <Property Name="Pri_isbn" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Pri_tifb" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="img" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="Tip_coleccion" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Compl" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Edicion" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Lugar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Editorial" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Anyo" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="Longitud" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="Paginas" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Tipomater" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Idioma" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="IdEditorial" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Anyo_reimp" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Estado_eliminacion" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="contenidoOK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BIBLIO_UCSMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Inventario_libros" EntityType="Self.Inventario_libros" />
+    <EntitySet Name="Libros" EntityType="Self.Libro" />
+  </EntityContainer>
+</Schema>

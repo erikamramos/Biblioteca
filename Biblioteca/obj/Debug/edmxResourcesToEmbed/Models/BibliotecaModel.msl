@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BIBLIO_UCSMModelStoreContainer" CdmEntityContainer="BIBLIO_UCSMEntities">
+    <EntitySetMapping Name="Inventario_libros">
+      <EntityTypeMapping TypeName="BIBLIO_UCSMModel.Inventario_libros">
+        <MappingFragment StoreEntitySet="Inventario_libros">
+          <ScalarProperty Name="Inventario" ColumnName="Inventario" />
+          <ScalarProperty Name="Enlace" ColumnName="Enlace" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Tip_fondo" ColumnName="Tip_fondo" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Ult_inv" ColumnName="Ult_inv" />
+          <ScalarProperty Name="Ctrl_RFID" ColumnName="Ctrl_RFID" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Tomvol" ColumnName="Tomvol" />
+          <ScalarProperty Name="Biblioteca" ColumnName="Biblioteca" />
+          <ScalarProperty Name="Coleccion" ColumnName="Coleccion" />
+          <ScalarProperty Name="Ejemplares" ColumnName="Ejemplares" />
+          <ScalarProperty Name="Estado_Material" ColumnName="Estado_Material" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libros">
+      <EntityTypeMapping TypeName="BIBLIO_UCSMModel.Libro">
+        <MappingFragment StoreEntitySet="Libros">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="COD1" ColumnName="COD1" />
+          <ScalarProperty Name="COD2" ColumnName="COD2" />
+          <ScalarProperty Name="COD3" ColumnName="COD3" />
+          <ScalarProperty Name="COD4" ColumnName="COD4" />
+          <ScalarProperty Name="COD5" ColumnName="COD5" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Autor" ColumnName="Autor" />
+          <ScalarProperty Name="Contenido" ColumnName="Contenido" />
+          <ScalarProperty Name="palabrasClave" ColumnName="palabrasClave" />
+          <ScalarProperty Name="Enlace" ColumnName="Enlace" />
+          <ScalarProperty Name="Pri_isbn" ColumnName="Pri_isbn" />
+          <ScalarProperty Name="Pri_tifb" ColumnName="Pri_tifb" />
+          <ScalarProperty Name="img" ColumnName="img" />
+          <ScalarProperty Name="Tip_coleccion" ColumnName="Tip_coleccion" />
+          <ScalarProperty Name="Compl" ColumnName="Compl" />
+          <ScalarProperty Name="Edicion" ColumnName="Edicion" />
+          <ScalarProperty Name="Lugar" ColumnName="Lugar" />
+          <ScalarProperty Name="Editorial" ColumnName="Editorial" />
+          <ScalarProperty Name="Anyo" ColumnName="Anyo" />
+          <ScalarProperty Name="Longitud" ColumnName="Longitud" />
+          <ScalarProperty Name="Paginas" ColumnName="Paginas" />
+          <ScalarProperty Name="Tipomater" ColumnName="Tipomater" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Idioma" ColumnName="Idioma" />
+          <ScalarProperty Name="IdEditorial" ColumnName="IdEditorial" />
+          <ScalarProperty Name="Anyo_reimp" ColumnName="Anyo_reimp" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Estado_eliminacion" ColumnName="Estado_eliminacion" />
+          <ScalarProperty Name="contenidoOK" ColumnName="contenidoOK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
